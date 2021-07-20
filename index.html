@@ -1,387 +1,381 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <!-- PAGE INFO -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fratelli Cacau</title>
 
-    <!-- Icones -->
-    <link rel="stylesheet" href="assets/fonts/style.css" />
-    <script src="https://kit.fontawesome.com/6ced12f15b.js" crossorigin="anonymous"></script>
+<head>
+  <!-- PAGE INFO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fratelli Cacau</title>
 
-    <!-- Swiper -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+  <!-- Icones -->
+  <link rel="stylesheet" href="assets/fonts/style.css" />
+  <script src="https://kit.fontawesome.com/6ced12f15b.js" crossorigin="anonymous"></script>
 
-    <!-- STYLES -->
-    <link rel="shortcut icon" href="./assets/fotos/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/dark.css">
-    <link rel="stylesheet" href="./css/modal.css">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header id="header">
-      <nav class="container">
-        <a class="logo" href="#">Fratelli<span>Cacau</span></a>
-        <!-- menu -->
-        <div class="menu">
-          <ul class="grid">
-            <li><a class="title" href="#home">Início</a></li>
-            <li><a class="title" href="#about">Sobre</a></li>
-            <li><a class="title" href="#services">Serviços</a></li>
-            <li><a class="title" href="#testimonials">Depoimentos</a></li>
-            <li><a class="title" href="#contact">Contato</a></li>
-            <li>
-              <div class="toggle-dark">
-                <input id="switch" type="checkbox" name="theme">
-                <label for="switch">Toggle</label>
-              </div>
-            </li>
-          </ul>
+  <!-- STYLES -->
+  <link rel="shortcut icon" href="./assets/fotos/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/dark.css">
+  <link rel="stylesheet" href="./css/modal.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header id="header">
+    <nav class="container">
+      <a class="logo" href="#">Fratelli<span>Cacau</span></a>
+      <!-- menu -->
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="#home">Início</a></li>
+          <li><a class="title" href="#about">Sobre</a></li>
+          <li><a class="title" href="#services">Serviços</a></li>
+          <li><a class="title" href="#testimonials">Depoimentos</a></li>
+          <li><a class="title" href="#contact">Contato</a></li>
+          <li>
+            <div class="toggle-dark">
+              <input id="switch" type="checkbox" name="theme">
+              <label for="switch">Toggle</label>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- /menu -->
+      <div class="toggle icon-menu"></div>
+      <div class="toggle icon-close"></div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section class="section" id="home">
+      <div class="container grid">
+        <div class="image">
+          <img
+            src="https://user-images.githubusercontent.com/71888055/126194156-20068c29-e4bf-4855-aea5-058974dd9ce0.jpg"
+            alt="Logo da Fratelli Cacau" />
         </div>
-        <!-- /menu -->
-        <div class="toggle icon-menu"></div>
-        <div class="toggle icon-close"></div>
-      </nav>
-    </header>
+        <div class="text">
+          <h2 class="title">Trabalhando com amor</h2>
+          <p>
+            Doces artesanais feitos com todo carinho.
+          </p>
+          <!-- <a class="button" href="#">Conheça nosso cardápio</a> -->
 
-    <main>
-      <!-- HOME -->
-      <section class="section" id="home">
-        <div class="container grid">
-          <div class="image">
-            <img
-              src="https://user-images.githubusercontent.com/71888055/126194156-20068c29-e4bf-4855-aea5-058974dd9ce0.jpg"
-              alt="Logo da Fratelli Cacau"
-            />
-          </div>
-          <div class="text">
-            <h2 class="title">Trabalhando com amor</h2>
-            <p>
-              Doces artesanais feitos com todo carinho.
-            </p>
-            <!-- <a class="button" href="#">Conheça nosso cardápio</a> -->
-
-            <!-- Trigger/Open The Modal -->
-            <a class="button" id="myBtn">Conheça nosso cardápio</a>
-          </div>
+          <!-- Trigger/Open The Modal -->
+          <a class="button" id="myBtn">Conheça nosso cardápio</a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2>Cardápio Fratelli</h2>
-          </div>
-          <div class="modal-body">
-            <div class="content-wrapper">
-              <div id="cake">
-                <h4>Bolos</h4>
-                <p>Chocolate</p>
-                <p>Coco</p>
-                <p>Morango</p>
-                <p>Maracuja</p>
-                <p>Nutela</p>
-                <p>Leite Ninho</p>
-                <p>Frutas</p>
-                <p>M&M's</p>
-              </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Cardápio Fratelli</h2>
+        </div>
+        <div class="modal-body">
+          <div class="content-wrapper">
+            <div id="cake">
+              <h4>Bolos</h4>
+              <p>Chocolate</p>
+              <p>Coco</p>
+              <p>Morango</p>
+              <p>Maracuja</p>
+              <p>Nutela</p>
+              <p>Leite Ninho</p>
+              <p>Frutas</p>
+              <p>M&M's</p>
+            </div>
 
-              <div id="pot-cake">
-                <h4>Bolo de pote</h4>
-                <p>Chocolate</p>
-                <p>Coco</p>
-                <p>Morango</p>
-                <p>Maracuja</p>
-                <p>Nutela</p>
-                <p>Leite Ninho</p>
-                <p>Frutas</p>
-                <p>M&M's</p>
-              </div>
+            <div id="pot-cake">
+              <h4>Bolo de pote</h4>
+              <p>Chocolate</p>
+              <p>Coco</p>
+              <p>Morango</p>
+              <p>Maracuja</p>
+              <p>Nutela</p>
+              <p>Leite Ninho</p>
+              <p>Frutas</p>
+              <p>M&M's</p>
+            </div>
 
-              <div id="eggs">
-                <h4>Ovos de Páscoa</h4>
-                <p>Chocolate</p>
-                <p>Coco</p>
-                <p>Morango</p>
-                <p>Maracuja</p>
-                <p>Nutela</p>
-                <p>Leite Ninho</p>
-                <p>Frutas</p>
-                <p>M&M's</p>
-              </div>
+            <div id="eggs">
+              <h4>Ovos de Páscoa</h4>
+              <p>Chocolate</p>
+              <p>Coco</p>
+              <p>Morango</p>
+              <p>Maracuja</p>
+              <p>Nutela</p>
+              <p>Leite Ninho</p>
+              <p>Frutas</p>
+              <p>M&M's</p>
+            </div>
 
-              <div id="party">
-                <h4>Festa na caixa</h4>
-                <p>Chocolates</p>
-                <p>Bebidas</p>
-                <p>Salgados</p>
-                <p>Doces</p>
-              </div>
+            <div id="party">
+              <h4>Festa na caixa</h4>
+              <p>Chocolates</p>
+              <p>Bebidas</p>
+              <p>Salgados</p>
+              <p>Doces</p>
+            </div>
 
-              <div id="kits">
-                <h4>Kits de festa</h4>
-                <p>Kit mini festa</p>
-                <p>Brigadeiro</p>
-                <p>Beijinho</p>
-                <p>Cupcake</p>
-              </div>
+            <div id="kits">
+              <h4>Kits de festa</h4>
+              <p>Kit mini festa</p>
+              <p>Brigadeiro</p>
+              <p>Beijinho</p>
+              <p>Cupcake</p>
+            </div>
 
-              <div id="bar">
-                <h4>Barra recheada</h4>
-                <p>Diversos sabores</p>
-              </div>
+            <div id="bar">
+              <h4>Barra recheada</h4>
+              <p>Diversos sabores</p>
+            </div>
 
-              <div id="bar">
-                <h4>Datas especiais</h4>
-                <p>Dia das Mães</p>
-                <p>Dia dos Pais</p>
-                <p>Aniversários</p>
-                <p>Dia dos namorados</p>
-                <p>Natal/Ano novo</p>
-              </div>
+            <div id="bar">
+              <h4>Datas especiais</h4>
+              <p>Dia das Mães</p>
+              <p>Dia dos Pais</p>
+              <p>Aniversários</p>
+              <p>Dia dos namorados</p>
+              <p>Natal/Ano novo</p>
             </div>
           </div>
-          <div class="modal-footer">
-            <h4>Faça já seu pedido!!</h4>
+        </div>
+        <div class="modal-footer">
+          <h4>Faça já seu pedido!!</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-1"></div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container grid">
+        <div class="image">
+          <img
+            src="https://user-images.githubusercontent.com/71888055/126194156-20068c29-e4bf-4855-aea5-058974dd9ce0.jpg"
+            alt="Logo Fratelli" />
+        </div>
+        <div class="text">
+          <h2 class="title">Sobre nós</h2>
+          <p>
+            A Fratelli Cacau é uma empresa familiar, composta com 3 sócios.
+            A Vanessa que é a pessoa por trás do marketing e administração.
+            A Gláucia e o Marcos são os "mãos de fada", responsáveis por adoçar a vida de nossos clientes.
+            Nossos dois confeiteiros possuem mais de 10 anos de experiência, por conta disso podemos proporcionar
+            aos nossos clientes doces com muita qualidade.
+          </p>
+          <br />
+          <p>
+            A Fratelli Cacau foi criada em 2019, com o intuito de realizar um sonho, a concretização de um casamento
+            que nunca esqueceremos.
+            Hoje vemos que nossa maior missão está em sempre realizar os sonhos dos nossos cliente com doces
+            maravilhosos
+            e bolos que vocês nunca irão esquecer o delicioso sabor.
+            Buscamos aprimorar nossas técnicas continuamente para que nossos doces tenham uma excelente qualidade no
+            sabor,
+            textura e apresentação.
+            Nossos clientes podem confiar na qualidade do nosso delicioso cardápio.
+          </p>
+          <br />
+          <p>
+            Estamos muito felizes em poder compartilhar com vocês um pouco da nossa história, e será sempre uma honra
+            atendê-los.
+            Fratelli Cacau confeitando os sonhos e trabalhando com amor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-2"></div>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container grid">
+        <header>
+          <h2 class="title">Serviços</h2>
+          <p class="subtitle">
+            Com 2 anos a <strong>Fratelli Cacau</strong> já
+            conquistou diversos clientes através dos nossos serviços e qualidade nos produtos.
+          </p>
+        </header>
+        <div class="cards grid">
+          <div class="card">
+            <i class="fas fa-birthday-cake"></i>
+            <h3 class="title">Bolos</h3>
+            <p>
+              O que melhor do que comemorar algo ou apenas passar uma tarde tranquila com quem
+              gostamos comendo aquele pedaço delicioso de bolo?
+              Bolos para aniversários, noivados, casamentos e um gostoso café da tarde, que
+              irá te agradar no visual e no paladar!
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-candy-cane"></i>
+            <h3 class="title">Doces</h3>
+            <p>
+              Vou te contar com quais doces trabalhamos, mas você tem que tentar não se
+              apaixonar, hein!
+              Ovos de Páscoa tradicional e de colher, Barra de chocolate, brigadeiros de
+              todos os tipos e sabores, beijinhos e a mais nova novidade, nossa barra de
+              chocolate recheada!!!
+              Depois dessas delícias, dúvido você aguentar ficar sem a gente!!!
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-gifts"></i>
+            <h3 class="title">Presentes</h3>
+            <p>
+              O presente perfeito está nos detalhes, e aqui na Fratelli, além dos detalhes
+              vocês iram encontrar capricho, amor, sabores incríveis e muitas opções para
+              presentear aquela pessoa que você ama e até a si mesmo.
+              Aqui você encontra Kit festa, Festa na caixa, decorações únicas para cada
+              cliente e kit doces de sua escolha.
+              Venha descobrir o presente perfeito para quem você ama ou mostrar o quanto
+              você se ama e comprar um kit só para você, que tal?
+            </p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="divider-1"></div>
+    <div class="divider-1"></div>
 
-      <!-- ABOUT -->
-      <section class="section" id="about">
-        <div class="container grid">
-          <div class="image">
-            <img
-              src="https://user-images.githubusercontent.com/71888055/126194156-20068c29-e4bf-4855-aea5-058974dd9ce0.jpg"
-              alt="Logo Fratelli"
-            />
-          </div>
-          <div class="text">
-            <h2 class="title">Sobre nós</h2>
-            <p>
-              A Fratelli Cacau é uma empresa familiar, composta com 3 sócios.
-              A Vanessa que é a pessoa por trás do marketing e administração.
-              A Gláucia e o Marcos são os "mãos de fada", responsáveis por adoçar a vida de nossos clientes.
-              Nossos dois confeiteiros possuem mais de 10 anos de experiência, por conta disso podemos proporcionar
-              aos nossos clientes doces com muita qualidade.
-            </p>
-            <br />
-            <p>
-              A Fratelli Cacau foi criada  em 2019, com o intuito de realizar um sonho, a concretização de um casamento 
-              que nunca esqueceremos.
-              Hoje vemos que nossa maior missão está em sempre realizar os sonhos dos nossos cliente com doces maravilhosos
-              e bolos que vocês nunca irão esquecer o delicioso sabor.
-              Buscamos aprimorar nossas técnicas continuamente para que nossos doces tenham uma excelente qualidade no sabor, 
-              textura e apresentação.
-              Nossos clientes podem confiar na qualidade do nosso delicioso cardápio.
-            </p>
-            <br />
-            <p>
-              Estamos muito felizes em poder compartilhar com vocês um pouco da nossa história, e será sempre uma honra 
-              atendê-los.
-              Fratelli Cacau confeitando os sonhos e trabalhando com amor.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <div class="divider-2"></div>
-
-      <!-- SERVICES -->
-      <section class="section" id="services">
-        <div class="container grid">
-          <header>
-            <h2 class="title">Serviços</h2>
-            <p class="subtitle">
-              Com 2 anos a <strong>Fratelli Cacau</strong> já
-              conquistou diversos clientes através dos nossos serviços e qualidade nos produtos.
-            </p>
-          </header>
-          <div class="cards grid">
-            <div class="card">
-              <i class="fas fa-birthday-cake"></i>
-              <h3 class="title">Bolos</h3>
-              <p>
-                O que melhor do que comemorar algo ou apenas passar uma tarde tranquila com quem 
-                gostamos comendo aquele pedaço delicioso de bolo? 
-                Bolos para aniversários, noivados, casamentos e um gostoso café da tarde, que 
-                irá te agradar no visual e no paladar!
-              </p>
-            </div>
-            <div class="card">
-              <i class="fas fa-candy-cane"></i>
-              <h3 class="title">Doces</h3>
-              <p>
-                Vou te contar com quais doces trabalhamos, mas você tem que tentar não se 
-                apaixonar, hein!
-                Ovos de Páscoa tradicional e de colher, Barra de chocolate, brigadeiros de 
-                todos os tipos e sabores, beijinhos e a mais nova novidade, nossa barra de 
-                chocolate recheada!!! 
-                Depois dessas delícias, dúvido você aguentar ficar sem a gente!!!
-              </p>
-            </div>
-            <div class="card">
-              <i class="fas fa-gifts"></i>
-              <h3 class="title">Presentes</h3>
-              <p>
-                O presente perfeito está nos detalhes, e aqui na Fratelli, além dos detalhes 
-                vocês iram encontrar capricho, amor, sabores incríveis e muitas opções para 
-                presentear aquela pessoa que você ama e até a si mesmo.
-                Aqui você encontra Kit festa, Festa na caixa, decorações únicas para cada 
-                cliente e kit doces de sua escolha.
-                Venha descobrir o presente perfeito para quem você ama ou mostrar o quanto 
-                você se ama e comprar um kit só para você, que tal?
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="divider-1"></div>
-
-      <!-- TESTIMONIALS -->
-      <section class="section" id="testimonials">
-        <div class="container">
-          <header>
-            <h2 class="title">Depoimentos de quem já passou por aqui</h2>
-          </header>
-          <div class="testimonials swiper-container">
-            <div class="swiper-wrapper">
-              <div class="testimonial swiper-slide">
-                <blockquote>
-                  <p>
-                    <span>&ldquo;</span>
-                    Show de bola! Parabéns pelo seu trabalho.
-                  </p>
-                  <cite>
-                    <!-- <img
+    <!-- TESTIMONIALS -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <header>
+          <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+        </header>
+        <div class="testimonials swiper-container">
+          <div class="swiper-wrapper">
+            <div class="testimonial swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Show de bola! Parabéns pelo seu trabalho.
+                </p>
+                <cite>
+                  <!-- <img
                       src="assets/fotos/10.jpeg"
                       alt="Foto da cliente"
                     /> -->
-                    <i class="far fa-user"></i>
-                    Marcos Augusto
-                  </cite>
-                </blockquote>
-              </div>
+                  <i class="far fa-user"></i>
+                  Marcos Augusto
+                </cite>
+              </blockquote>
+            </div>
 
-              <div class="testimonial swiper-slide">
-                <blockquote>
-                  <p>
-                    <span>&ldquo;</span>
-                    A cada segundo uma delícia melhor que a outra.
-                  </p>
-                  <cite>
-                    <!-- <img
+            <div class="testimonial swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  A cada segundo uma delícia melhor que a outra.
+                </p>
+                <cite>
+                  <!-- <img
                       src="assets/fotos/56.jpeg"
                       alt="Foto da cliente"
                     /> -->
-                    <i class="far fa-user"></i>
-                    Irene Farias
-                  </cite>
-                </blockquote>
-              </div>
+                  <i class="far fa-user"></i>
+                  Irene Farias
+                </cite>
+              </blockquote>
+            </div>
 
-              <div class="testimonial swiper-slide">
-                <blockquote>
-                  <p>
-                    <span>&ldquo;</span>
-                    Ela adorou o presente, bolo está ótimo.
-                  </p>
-                  <cite>
-                    <!-- <img
+            <div class="testimonial swiper-slide">
+              <blockquote>
+                <p>
+                  <span>&ldquo;</span>
+                  Ela adorou o presente, bolo está ótimo.
+                </p>
+                <cite>
+                  <!-- <img
                       src="assets/fotos/26.jpeg"
                       alt="Foto do cliente"
                     /> -->
-                    <i class="far fa-user"></i>
-                    Athilas Silva
-                  </cite>
-                </blockquote>
-              </div>
+                  <i class="far fa-user"></i>
+                  Athilas Silva
+                </cite>
+              </blockquote>
             </div>
-
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-
-      <div class="divider-2"></div>
-
-      <!-- CONTACT -->
-      <section class="section" id="contact">
-        <div class="container grid">
-          <div class="text">
-            <h2 class="title">Entre em contato com a gente!</h2>
-            <p>
-              Entre em contato com a Fratelli, queremos tirar suas dúvidas,
-              ouvir suas críticas e sugestões.
-            </p>
-            <a
-              href="https://api.whatsapp.com/send?phone=+5511954992144"
-              class="button"
-              target="_blank"
-              ><i class="icon-whatsapp"></i> Entrar em contato</a
-            >
           </div>
 
-          <div class="links">
-            <ul class="grid">
-              <li><i class="icon-phone"></i>11 95499-2144</li>
-              <li><i class="icon-map-pin"></i> Rua Indefinida, 7070</li>
-              <li><i class="icon-mail"></i> contato@fratellicacau.com</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <div class="divider-1"></div>
-    </main>
-
-    <footer class="section">
-      <div class="container grid">
-        <div class="brand">
-          <a class="logo logo-alt" href="#home">Fratelli<span>Cacau</span>.</a>
-          <p>Copyright &copy; 2021 - The Developers Solutions
-          </p>
-          <p>All rights reserved.</p>
-        </div>
-
-        <div class="social grid">
-          <a href="https://www.instagram.com/fratellicacau/" target="_blank">
-            <i class="icon-instagram"></i>
-          </a>
-          <a href="https://www.facebook.com/fratellicacau" target="_blank">
-            <i class="icon-facebook"></i
-          ></a>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
+    <div class="divider-2"></div>
 
-    <!-- swiper -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container grid">
+        <div class="text">
+          <h2 class="title">Entre em contato com a gente!</h2>
+          <p>
+            Entre em contato com a Fratelli, queremos tirar suas dúvidas,
+            ouvir suas críticas e sugestões.
+          </p>
+          <a href="https://api.whatsapp.com/send?phone=+5511954992144" class="button" target="_blank"><i
+              class="icon-whatsapp"></i> Entrar em contato</a>
+        </div>
 
-    <!-- scrollreveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+        <div class="links">
+          <ul class="grid">
+            <li><i class="icon-phone"></i>11 95499-2144</li>
+            <li><i class="icon-map-pin"></i> Rua Indefinida, 7070</li>
+            <li><i class="icon-mail"></i> contato@fratellicacau.com</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <!-- main.js -->
-    <script src="./js/main.js"></script>
-    <script src="./js/modal.js"></script>
-    <script src="./js/darkMode.js"></script>
-  </body>
+    <div class="divider-1"></div>
+  </main>
+
+  <footer class="section">
+    <div class="container grid">
+      <div class="brand">
+        <a class="logo logo-alt" href="#home">Fratelli<span>Cacau</span>.</a>
+        <p>Copyright &copy; 2021 - The Developers Solutions
+        </p>
+        <p>All rights reserved.</p>
+      </div>
+
+      <div class="social grid">
+        <a href="https://www.instagram.com/fratellicacau/" target="_blank">
+          <i class="icon-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/fratellicacau" target="_blank">
+          <i class="icon-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
+  <!-- swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- scrollreveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- main.js -->
+  <script src="./js/main.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/darkMode.js"></script>
+</body>
+
 </html>
