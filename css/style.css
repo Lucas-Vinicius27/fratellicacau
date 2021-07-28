@@ -22,16 +22,24 @@ img {
 :root {
   --header-height: 4.5rem;
 
-  /* colors */
-  --hue: 159;
-  /* HSL color mode */
-  --base-color: hsl(var(--hue) 36% 57%); /* Verde */
-  --base-color-second: hsl(var(--hue) 65% 88%); /* Verde mais claro*/
-  --base-color-alt: hsl(var(--hue) 57% 53%); /* Verde mais escuro no hover*/
-  --title-color: hsl(var(--hue) 41% 10%); /* Preto */
-  --text-color: hsl(0 0% 46%); /* Cinza */
-  --text-color-light: hsl(0 0% 98%); /* Cinza claro */
-  --body-color: hsl(0 0% 98%); /* Branco */
+  --header-color: #fcfcfc;
+  --header-text: #000000;
+  --body-color: #d45451;
+  --alt-body: #fcfcfc;
+  --title-color: #000000;
+  --alt-title:#8B4513;
+  --text-color: #000000;
+  --alt-text: #808080;
+  --buttons-color: #ffffff;
+  --hover-color: #dcdcdc;
+  --icon-color: #D2691E;
+  --base-color: #FFA07A;
+  --shadow-box: rgba(0, 0, 0, 0.08);
+
+/* Colors per session */
+--home-text: #ffffff;
+--services-title: #ffffff;
+--contact-text: #ffffff;
 
   /* fonts */
   --title-font-size: 1.875rem;
@@ -60,7 +68,7 @@ body {
 }
 
 .button {
-  background-color: var(--base-color);
+  background-color: var(--buttons-color);
   color: var(--text-color-light);
   height: 3.5rem;
   display: inline-flex;
@@ -69,10 +77,11 @@ body {
   border-radius: 0.25rem;
   font: 500 1rem var(--body-font);
   transition: background 0.3s;
+  cursor: pointer;
 }
 
 .button:hover {
-  background: var(--base-color-alt);
+  background: var(--hover-color);
 }
 
 .divider-1 {
@@ -133,7 +142,7 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: var(--body-color);
+  background-color: var(--header-color);
   width: 100%;
 }
 
@@ -144,11 +153,11 @@ body {
 /*====  LOGO ============================ */
 .logo {
   font: 700 1.31rem var(--title-font);
-  color: var(--title-color);
+  color: #d45451;
 }
 
 .logo span {
-  color: var(--base-color);
+  color: var( --alt-title);
 }
 
 .logo-alt span {
@@ -212,7 +221,7 @@ nav.show .menu {
   opacity: 1;
   visibility: visible;
 
-  background: var(--bg);
+  background: var(--header-color);
 
   height: 100vh;
   width: 100vw;
@@ -277,7 +286,8 @@ nav.show div.icon-close {
   content: '';
   height: 100%;
   width: 100%;
-  background: var(--bg-img);
+  background-image: url("https://user-images.githubusercontent.com/71888055/127383471-527bb751-666f-484e-9f84-07a00fc15b58.jpg");
+  object-fit: cover;
   position: absolute;
   top: -16.8%;
   left: 16.7%;
@@ -300,17 +310,19 @@ nav.show div.icon-close {
   text-align: center;
 }
 
-#home .text h1 {
+#home .text h2 {
   margin-bottom: 1rem;
+  color: var(--home-text);
 }
 
 #home .text p {
   margin-bottom: 2rem;
+  color: var(--home-text);
 }
 
 /*====  ABOUT ============================ */
 #about {
-  background: var(--body-color);
+  background: var( --alt-body);
 }
 
 #about .container {
@@ -325,7 +337,7 @@ nav.show div.icon-close {
   content: '';
   height: 100%;
   width: 100%;
-  background: var(--bg-img);
+  background-image: url("https://user-images.githubusercontent.com/71888055/126194156-20068c29-e4bf-4855-aea5-058974dd9ce0.jpg");
   position: absolute;
   top: -8.3%;
   left: -33%;
@@ -344,9 +356,19 @@ nav.show div.icon-close {
 #about .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+  color: var(--text-color);
 }
 
 /*====  SERVICES ============================ */
+#services h2,
+#services .subtitle{
+  color: var(--services-title);
+}
+
+#services strong{
+  color: #000000;
+}
+
 .cards.grid {
   gap: 1.5rem;
 }
@@ -355,6 +377,7 @@ nav.show div.icon-close {
   padding: 3.625rem 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
   border-bottom: 0.25rem solid var(--base-color);
+  background:  var( --alt-body);
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
 }
@@ -363,7 +386,7 @@ nav.show div.icon-close {
   display: block;
   margin-bottom: 1.5rem;
   font-size: 5rem;
-  color: var(--base-color);
+  color: var(--icon-color);
 }
 
 .card .title {
@@ -373,7 +396,7 @@ nav.show div.icon-close {
 
 /*====  TESTIMONIALS ============================ */
 #testimonials {
-  background: var(--body-color);
+  background: var(--alt-body);
 }
 
 #testimonials .container {
@@ -397,7 +420,7 @@ nav.show div.icon-close {
   position: relative;
   text-indent: 1.875rem;
   margin-bottom: 1.5rem;
-  color: var(--title-color);
+  color: var(--text-color);
 }
 
 #testimonials blockquote p span {
@@ -438,6 +461,11 @@ nav.show div.icon-close {
   gap: 4rem;
 }
 
+#contact h2,
+#contact p{
+  color: var(--contact-text);
+}
+
 #contact .text p {
   margin-bottom: 2rem;
 }
@@ -455,15 +483,16 @@ nav.show div.icon-close {
 #contact ul li {
   display: flex;
   align-items: center;
+  color: var(--contact-text);
 }
 
 #contact ul li i {
-  color: var(--base-color);
+  color: #ffffff;
 }
 
 /*====  FOOTER ============================ */
 footer {
-  background: var(--base-color);
+  background: var(--alt-body);
 }
 
 footer.section {
@@ -475,14 +504,22 @@ footer .logo {
   margin-bottom: 1.5rem;
 }
 
+footer .brand a{
+  color: #d45451;
+}
+
+footer .brand a span{
+  color: var(--alt-title);
+}
+
 footer .brand p {
-  color: var(--text-color-light);
+  color: var(--alt-title);
   margin-bottom: 0.75rem;
 }
 
 footer i {
   font-size: 1.5rem;
-  color: var(--text-color-light);
+  color: var(--icon-color);
 }
 
 footer .social {

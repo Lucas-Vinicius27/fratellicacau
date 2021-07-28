@@ -3,12 +3,10 @@ html {
     --bg: #333333;
     --color-headings: #3664FF;
     --base-color: #006400;
-    --bg-img: #ADD8E6;
     --base-color-alt: #006400;
     --title-color: #fafafa;
     --text-color: #fafafa;
     --text-color-light: #f8f8ff;
-    --shadow-box: rgba(0, 0, 0, 0.08);
 }
 
 body, #about, #testimonials, #contact{
