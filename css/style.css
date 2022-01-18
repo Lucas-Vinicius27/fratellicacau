@@ -110,7 +110,7 @@ nav ul li a.active::after {
     position: relative;
     margin-left: 18rem;
     height: 50rem;
-    width: 55rem;
+    width: 50rem;
 }
 
 #home .img::before{
@@ -120,8 +120,8 @@ nav ul li a.active::after {
     background-image: url("https://user-images.githubusercontent.com/71888055/127385469-fb6927f1-e10f-434a-ab62-b99d8d85c240.png");
     object-fit: cover;
     position: absolute;
-    top: -4%;
-    left: 4%;
+    top: -1%;
+    left: 2%;
     z-index: 0;
 }
 
@@ -196,12 +196,12 @@ nav ul li a.active::after {
     align-items: center;
     text-align: center;
     background-color: var(--morango);
-    height: 100vh;
-    padding: 7rem;
+    height: 110vh;
+    padding: 5rem;
 }
 
 #services h2{
-    padding-top: 6rem;
+    padding-top: 2rem;
 }
 
 #services h2,
@@ -215,12 +215,12 @@ nav ul li a.active::after {
 
 #services > h2{
     font-size: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 #services .subtitle{
     font-size: 1.8rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .cards{
@@ -358,7 +358,7 @@ nav ul li a.active::after {
     display: flex;
     flex-direction: column;
     background-color: var(--morango);
-    height: 70vh;
+    height: 80vh;
     width: 100vw;
     padding: 4rem;
     word-wrap: break-word;
