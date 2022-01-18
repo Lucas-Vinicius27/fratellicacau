@@ -1,51 +1,36 @@
-/*  abre e fecha o menu quando clicar no icone: hamburguer e x */
-const nav = document.querySelector('#header nav')
-const toggle = document.querySelectorAll('nav .toggle')
+// MENU
+const menuSection = document.querySelector(".menu-section");
+const menuToggle = document.querySelectorAll(".menu-toggle");
 
-for (const element of toggle) {
-  element.addEventListener('click', function () {
-    nav.classList.toggle('show')
-  })
+for(const element of menuToggle){
+  element.addEventListener("click", () => {
+    menuSection.classList.toggle("on");
+  });
 }
 
-/* quando clicar em um item do menu, esconder o menu */
-const links = document.querySelectorAll('nav ul li a')
+//Removendo o menu ao clicar em um dos links
+const links = document.querySelectorAll("nav ul li a");
 
-for (const link of links) {
-  link.addEventListener('click', function () {
-    nav.classList.remove('show')
-  })
+for(const link of links){
+  link.addEventListener("click", () => {
+    menuSection.classList.remove("on");
+  });
 }
 
-/* mudar o header da página quando der scroll */
-const header = document.querySelector('#header')
+// Scroll do header
+const header = document.querySelector("header")
 const navHeight = header.offsetHeight
 
-function changeHeaderWhenScroll() {
-  if (window.scrollY >= navHeight) {
-    // scroll é maior que a altura do header
-    header.classList.add('scroll')
-  } else {
-    // menor que a altura do header
-    header.classList.remove('scroll')
+function changeHeaderWhenScroll(){
+  if(window.screenY >= navHeight){
+    // scroll maior que altura do header
+    header.classList.add("scroll")
+  }
+  else{
+    // scroll menor que altura do header
+    header.classList.remove("scroll")
   }
 }
-
-/* Testimonials carousel slider swiper */
-const swiper = new Swiper('.swiper-container', {
-  slidesPerView: 1,
-  pagination: {
-    el: '.swiper-pagination'
-  },
-  mousewheel: true,
-  keyboard: true,
-  breakpoints: {
-    767: {
-      slidesPerView: 1,
-      setWrapperSize: true
-    }
-  }
-})
 
 /* ScrollReveal: Mostrar elementos quando der scroll na página */
 const scrollReveal = ScrollReveal({
@@ -53,58 +38,103 @@ const scrollReveal = ScrollReveal({
   distance: '30px',
   duration: 700,
   reset: false
-})
+});
 
 scrollReveal.reveal(
-  `#home .image, #home .text,
-  #about .image, #about .text,
-  #services header, #services .card,
-  #testimonials header, #testimonials .testimonials
-  #contact .text, #contact .links,
-  footer .brand, footer .social
+  `header h1, header nav,
+  #home .text, #home .img,
+  #about .img, #about .text,
+  #services .title, #services .subtitle, #services .card,
+  #testimonials .title, #testimonials .container
+  #contact #contact-text, #contact .links,
+  footer #footer-text, footer .icons
   `,
   { interval: 100 }
-)
+);
 
-/* Botão voltar para o topo */
-const backToTopButton = document.querySelector('.back-to-top')
+// Slides do Carrosel
+var slide = document.getElementsByClassName("slide");
+var indicator = document.getElementById("indicator");
+var dots = document.getElementsByClassName("dots");
+var autoplay = document.getElementsByClassName("container")[0].getAttribute("data-autoplay");
+var l = slide.length;
+var interval = 5000;
+var set;
 
-function backToTop() {
-  if (window.scrollY >= 560) {
-    backToTopButton.classList.add('show')
-  } else {
-    backToTopButton.classList.remove('show')
+window.onload = function () {
+  initialize();
+  slide[0].style.opacity = "1";
+  for (var j = 0; j < l; j++) {
+    indicator.innerHTML += "<div class='dots' onclick=change(" + j + ")></div>";
   }
+
+  dots[0].style.background = "#696969";
 }
 
-/* Menu ativo conforme a seção visível na página */
-const sections = document.querySelectorAll('main section[id]')
-function activateMenuAtCurrentSection() {
-  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
-
-  for (const section of sections) {
-    const sectionTop = section.offsetTop
-    const sectionHeight = section.offsetHeight
-    const sectionId = section.getAttribute('id')
-
-    const checkpointStart = checkpoint >= sectionTop
-    const checkpointEnd = checkpoint <= sectionTop + sectionHeight
-
-    if (checkpointStart && checkpointEnd) {
-      document
-        .querySelector('nav ul li a[href*=' + sectionId + ']')
-        .classList.add('active')
-    } else {
-      document
-        .querySelector('nav ul li a[href*=' + sectionId + ']')
-        .classList.remove('active')
-    }
-  }
+function initialize() {
+  if (autoplay === "true")
+  set = setInterval(function () { next(); }, interval);
 }
 
-/* When Scroll */
-window.addEventListener('scroll', function () {
-  changeHeaderWhenScroll()
-  backToTop()
-  activateMenuAtCurrentSection()
-})
+function change(index) {
+  clearInterval(set);
+  count = index;
+  for (var j = 0; j < l; j++) {
+    slide[j].style.opacity = "0";
+    dots[j].style.background = "#bdbdbd";
+  }
+
+  slide[count].style.opacity = "1";
+  dots[count].style.background = "#696969";
+}
+
+var count = 0;
+
+function next() {
+  clearInterval(set);
+  slide[count].style.opacity = "0";
+  count++;
+  for (var j = 0; j < l; j++) {
+    dots[j].style.background = "#bdbdbd";
+  }
+
+
+  if (count == l) {
+    count = 0;
+    slide[count].style.opacity = "1";
+    dots[count].style.background = "#696969";
+
+  }
+  else {
+    slide[count].style.opacity = "1";
+    dots[count].style.background = "#696969";
+  }
+
+  initialize()
+}
+
+function prev() {
+  clearInterval(set);
+  slide[count].style.opacity = "0";
+  for (var j = 0; j < l; j++) {
+    dots[j].style.background = "#bdbdbd";
+  }
+
+  count--;
+
+  if (count == -1) {
+    count = l - 1;
+    slide[count].style.opacity = "1";
+    dots[count].style.background = "#696969";
+
+  }
+  else {
+    slide[count].style.opacity = "1";
+    dots[count].style.background = "#696969";
+  }
+  
+  initialize();
+}
+
+// Pegando o ano atual no footer
+document.getElementById("year").innerHTML = new Date().getFullYear();
