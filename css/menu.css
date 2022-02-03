@@ -1,0 +1,210 @@
+body{
+    background: linear-gradient(#FFAC48, #FC91FF, #FBDB37);
+    scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 7rem;
+    background-color: var(--header-color);
+}
+
+header h1{
+    font-size: 2.5rem;
+    color: var(--morango);
+}
+
+header h1 span{
+    color: var(--chocolate);
+}
+
+header a{
+    font-size: 1.6rem;
+    color: #000;
+    padding: 1rem;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+header a:hover{
+    color: #fff;
+    background-color: var(--morango);
+}
+
+main > h2{
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+main ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+main ul li{
+    background-color: #eee;
+    padding: 1.2rem 2rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+}
+
+main ul li.active{
+    background-color: var(--chocolate);
+    color: #fff;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card{
+    position: relative;
+    width: 28rem;
+    height: 45rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #26242e;
+    overflow: hidden;
+}
+
+.card.hide{
+    display: none;
+}
+
+.card > img{
+    z-index: 1;
+    width: 30rem;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    top: -5rem;
+    left: 5rem;
+    width: 30rem;
+    height: 30rem;
+    background: url(../img/20211127_143831.png) center / cover;
+    opacity: .1;
+}
+
+.content-box{
+    position: absolute;
+    z-index: 1;
+    bottom: 0.7rem;
+    width: 25.5rem;
+    height: 23rem;
+    padding: 0 0.7rem;
+    border-radius: 10px 10px 15px 15px;
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, .2);
+    border: 1px solid rgba(255, 255, 255, .3);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(1rem);
+}
+
+.content-box:hover{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.content-box > h2{
+    color: #fff;
+    font-size: 2rem;
+    position: relative;
+}
+
+.content-box > h2::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.content-box p{
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.content-box .btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btns .price{
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.btn{
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: var(--morango);
+    border-radius: 8px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: var(--bg-secundary);
+    margin-top: 2rem;
+}
+
+ footer h3{
+    font-size: 3rem;
+    color: var(--morango);
+    margin-bottom: 2rem;
+}
+
+
+footer h3 span{
+    color: var(--chocolate);
+}
+
+footer p{
+    font-size: 1.8rem;
+    color: var(--chocolate);
+}
+
+footer a{
+    margin: 0 1rem;
+}
+
+footer a i{
+    font-size: 2rem;
+    color: var(--chocolate);
+    margin-top: 3rem;
+}
