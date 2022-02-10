@@ -1,3 +1,6 @@
+// Pegando o ano atual e colocando no footer
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
 // Seleção de Filtro do cardápio
 const list = document.querySelectorAll(".list");
 const card = document.querySelectorAll(".card");
