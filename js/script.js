@@ -26,3 +26,11 @@ for(let i = 0; i < list.length; i++){
         }
     })
 }
+
+function encomendar(produto) {
+    $msg = `Olá tudo bem? Eu gostaria de encomendar ${produto}.`;
+    window.open(
+        `https://api.whatsapp.com/send?phone=+5511954992144&text=${$msg}`,
+        "_blank"
+    );
+}
