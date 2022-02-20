@@ -149,7 +149,7 @@ main ul li.active{
 
 .content-box p{
     font-size: 1.4rem;
-    color: #fff;
+    color: #000;
 }
 
 .content-box .btns{
@@ -170,6 +170,7 @@ main ul li.active{
     color: #fff;
     background-color: var(--morango);
     border-radius: 8px;
+    cursor: pointer;
 }
 
 footer{
